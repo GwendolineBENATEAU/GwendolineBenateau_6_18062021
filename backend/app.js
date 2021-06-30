@@ -1,7 +1,11 @@
 //import express
 const express = require('express');
+//application Express
+const app = express();
+
 //import body-parser
 const bodyParser = require('body-parser');
+
 //import mongoose
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://adminSoPekocko:adminSoPassword@cluster0.f4gxp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
@@ -10,13 +14,13 @@ mongoose.connect('mongodb+srv://adminSoPekocko:adminSoPassword@cluster0.f4gxp.mo
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
+//import des routeurs
+const sauceRoutes = require('./routes/sauce');
+const userRoutes = require('./routes/user');
 
-//application express
-const app = express();
 
 
-//configuration de la réponse avec des middlewares qui se suivent (le dernier renvoie la réponse au client)
-//1.correction des Erreurs de CORS avec ajout de headers dans les réponses
+//correction des Erreurs de CORS avec ajout de headers dans les réponses
 app.use((req, res, next) => {
   //accéder à notre API depuis n'importe quelle origine *
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -27,30 +31,13 @@ app.use((req, res, next) => {
   next();
 });
 
-//2.Pour gérer la demande POST provenant de l'application front-end, il nous faudra le package body-parser 
+//gestion des requêtes provenant de l'application front-end, il faut le package body-parser défini comme middleware global
 //(analyse le corps de la requête et le formate pour en faciliter l'exploitation) pour extraire l'objet JSON de la demande 
-//puis, définissez sa fonction json comme middleware global pour votre application
 app.use(bodyParser.json());
-//enfin, traitement des requêtes ici ...
 
-app.use((req, res, next) => {
-  console.log('Requête reçue !');
-  next();
-});
-
-app.use((req, res, next) => {
-  res.status(201);
-  next();
-});
-
-app.use((req, res, next) => {
-  res.json({ message: 'Votre requête a bien été reçue !' });
-  next();
-});
-
-app.use((req, res, next) => {
-  console.log('Réponse envoyée avec succès !');
-});
+//enregistrement des routes
+app.use('/api/sauces', sauceRoutes);
+app.use('/api/auth', userRoutes);
 
 
 
