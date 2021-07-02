@@ -1,6 +1,7 @@
-//package de chiffrement bcrypt
+//import du package de chiffrement bcrypt
 const bcrypt = require('bcrypt');
-
+//import du package jsonwebtoken
+const jwt = require('jsonwebtoken');
 //import du modèle de données Mongoose
 const User = require('../models/User');
 
@@ -45,9 +46,15 @@ exports.signup = (req, res, next) => {
             }
             //mdp ok
             res.status(200).json({
-              //renvoie d'un user id au front et d'un token
+              //renvoie d'un user id au front et d'un token encodé
               userId: user._id,
-              token: 'TOKEN'
+              //utilisation de la fonction sign de jsonwebtoken pour encoder un token qui sera renvoyé au front avec la rép et
+              //qui contient l'ID de l'utilisateur en tant que payload (les données encodées dans le token)
+              token: jwt.sign(
+                { userId: user._id },
+                'RANDOM_TOKEN_SECRET',
+                { expiresIn: '24h' }
+              )
             });
           })
           .catch(error => res.status(500).json({ error }));

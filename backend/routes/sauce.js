@@ -6,19 +6,22 @@ const router = express.Router();
 //import du controleur
 const sauceCtrl = require('../controllers/sauce');
 
+//import du middleware d'authentification
+const auth = require('../middleware/auth');
 
-//application des controleurs dans les routes CRUD correspondantes
-router.post('/', sauceCtrl.create);
 
-router.post('/:id/like', sauceCtrl.like);
+//application des controleurs dans les routes CRUD correspondantes avec protection (argument auth)
+router.post('/', auth, sauceCtrl.create);
 
-router.put('/:id', sauceCtrl.update);
+router.post('/:id/like', auth, sauceCtrl.like);
 
-router.delete('/:id', sauceCtrl.delete);
+router.put('/:id', auth, sauceCtrl.update);
 
-/* router.get('/:id', sauceCtrl.readOne); */
+router.delete('/:id', auth, sauceCtrl.delete);
 
-router.get('/', sauceCtrl.readAll);
+/* router.get('/:id', auth, sauceCtrl.readOne); */
+
+router.get('/', auth, sauceCtrl.readAll);
 
 
 
