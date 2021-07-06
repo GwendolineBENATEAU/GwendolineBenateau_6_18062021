@@ -1,5 +1,5 @@
+//import des modules d'extension
 const mongoose = require('mongoose');
-
 const uniqueValidator = require('mongoose-unique-validator');
 //'use strict';
 

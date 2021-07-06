@@ -6,8 +6,9 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
 
-//********************************************implémentation de 2 middlewares d'authentification utilisateur********************************************
-//création d'un utilisateur dans la base de données
+//implémentation de 2 middlewares d'authentification utilisateur
+
+//***************************************création d'un utilisateur dans la base de données***************************************
 exports.signup = (req, res, next) => {
     //appelle de la fonction de hachage bcrypt dans le mot de passe (= cryptage du mdp) avec salage du mdp 10 fois
     bcrypt.hash(req.body.password, 10)
@@ -28,7 +29,7 @@ exports.signup = (req, res, next) => {
   };
 
 
-
+//***************************************recherche de l'utilisateur dans la base de donnée***************************************
   exports.login = (req, res, next) => {
     //recherche de l'utilisateur dans la base de donnée via son @
     User.findOne({ email: req.body.email })

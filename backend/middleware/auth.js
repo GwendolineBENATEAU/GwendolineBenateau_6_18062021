@@ -1,11 +1,11 @@
-//middleware qui protégera les routes sauces.js
+//import du module jsonwebtoken
 const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => 
 {
   try 
   {
-    //extraction du token du header Authorisation de la requete entrante avec la fonction split (récupération après mot-clé Bearer' ')
+    //extraction du token du header Authorisation de la requête entrante avec la fonction split (récupération après mot-clé Bearer' ')
     const token = req.headers.authorization.split(' ')[1];
     //décodage du token avec la fonction verify
     const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
@@ -22,13 +22,10 @@ module.exports = (req, res, next) =>
     {
       next();
     }
-
   } 
 
   catch 
   {
-    res.status(401).json({
-      error: error | 'Requête non authentifiée !'
-    });
+    res.status(401).json({error: error | 'Requête non authentifiée !'});
   }
 };
