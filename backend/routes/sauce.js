@@ -10,11 +10,15 @@ const sauceCtrl = require('../controllers/sauce');
 //import du middleware d'authentification
 const auth = require('../middleware/auth');
 
+//import du middleware multer
+const multer = require('../middleware/multer-config');
+
+
 
 //application des controleurs dans les routes CRUD correspondantes avec protection (argument auth)
-router.post('/', auth, sauceCtrl.create);
+router.post('/', auth, multer, sauceCtrl.create);
 router.post('/:id/like', auth, sauceCtrl.like);
-router.put('/:id', auth, sauceCtrl.update);
+router.put('/:id', auth, multer, sauceCtrl.update);
 router.delete('/:id', auth, sauceCtrl.delete);
 router.get('/:id', auth, sauceCtrl.readOne);
 router.get('/', auth, sauceCtrl.readAll);

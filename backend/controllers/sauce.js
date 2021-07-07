@@ -1,11 +1,13 @@
 //import du modèle de données Mongoose
 const Sauce = require('../models/Sauce');
+const fs = require('fs');
 
 
 //implémentation des middlewares correspondants aux routes CRUD pour la gestion des sauces
 
 //**************************************** création et enregistrement des sauces dans la base de données ****************************************
 exports.create = (req, res, next) => {
+    //analyse à l'aide de JSON.parse() pour obtenir un objet utilisable
 	const sauceCreate = JSON.parse(req.body.sauce);
     //suppresion du champ id généré par le front
     delete sauceCreate._id;
@@ -13,7 +15,10 @@ exports.create = (req, res, next) => {
     //création d'une nouvelle sauce en objet JavaScript contenant toutes les informations requises du corps de requête
     const sauce = new Sauce({
         ...sauceCreate,
+        //modif url de l'image : req.protocol pour obtenir le premier segment http, '://' puis req.get('host') pour résoudre l'hôte du serveur
+        //enfin '/images/' et le nom de fichier pour compléter notre URL
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
+        //Mise à zéro des likes et dislikes
         likes: 0,
         dislikes: 0,
         usersLiked: [],
@@ -66,13 +71,18 @@ exports.like = (req, res, next) => {
 //**************************************** modification d'une sauce ****************************************
 exports.update = (req, res, next) => 
 {
+    //création d'un objet qui regarde si req.file existe ou non
     const sauceUpdate = req.file ?
+    //si le fichier file existe
     {
+        //on parse de l'object
         ...JSON.parse(req.body.sauce),
+        //et on traite la nouvelle image
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     } : { 
         ...req.body 
     };
+    //s'il n'existe pas, on traite simplement l'objet entrant :
     //utilisation de la méthode updateOne() dans notre modèle Sauce qui permet de maj
     Sauce.updateOne({ _id: req.params.id }, { ...sauceUpdate, _id: req.params.id })
       .then(() => res.status(200).json({ message: 'Sauce modifiée !'}))
@@ -83,11 +93,13 @@ exports.update = (req, res, next) =>
 //**************************************** supression d'une sauce ****************************************
 exports.delete = (req, res, next) => 
 {
-    //utilisation la méthode findOne() dans notre modèle Sauce pour trouver la sauce unique ayant le même _id que le paramètre de la requête 
+    //recherche avec la méthode findOne() dans notre modèle Sauce pour trouver la sauce unique ayant le même _id que le paramètre de la requête 
     Sauce.findOne({ _id: req.params.id })
         .then(sauce => {
+            //récupération du nom du fichier
             const filename = sauce.imageUrl.split('/images/')[1];
-            fs.unlink(`/images/${filename}`, () => {
+            //appel de la fonction unlink pour supprimer le fichier image recherché
+            fs.unlink(`images/${filename}`, () => {
                 //La méthode deleteOne() correspondant au document à supprimer avec envoi d'une réponse de réussite ou d'échec au front-end
                 Sauce.deleteOne({ _id: req.params.id })
                     .then(() => res.status(200).json({ message: 'Sauce supprimée !'}))
