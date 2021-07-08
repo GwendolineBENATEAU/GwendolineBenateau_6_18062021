@@ -28,7 +28,7 @@ app.set('port', port);
 
 
 
-//la fonction errorHandler recherche les différentes erreurs et les gère de manière appropriée. Elle est ensuite enregistrée dans le serveur
+//la fonction errorHandler recherche les différentes erreurs et les gère
 const errorHandler = error => 
 {
   if (error.syscall !== 'listen') 
