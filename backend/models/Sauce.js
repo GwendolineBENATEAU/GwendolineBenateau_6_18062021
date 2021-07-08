@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-//'use strict';
 
 //schéma de données avec la méthode schema mise à disposition par Mongoose
 const sauceSchema = mongoose.Schema({

@@ -1,7 +1,7 @@
 //import du module express
 const express = require('express');
 
-//routeur Express
+//lancement du routeur Express
 const router = express.Router();
 
 //import du controleur pour la gestion des sauces
@@ -12,7 +12,6 @@ const auth = require('../middleware/auth');
 
 //import du middleware multer
 const multer = require('../middleware/multer-config');
-
 
 
 //application des controleurs dans les routes CRUD correspondantes avec protection (argument auth)

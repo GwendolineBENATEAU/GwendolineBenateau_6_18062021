@@ -1,5 +1,8 @@
 //import du module jsonwebtoken
 const jwt = require('jsonwebtoken');
+//import et lancement du package dotenv pour accès aux variables d'environnement
+const dotenv = require("dotenv");
+dotenv.config();
 
 module.exports = (req, res, next) => 
 {
@@ -8,7 +11,7 @@ module.exports = (req, res, next) =>
     //extraction du token du header Authorisation de la requête entrante avec la fonction split (récupération après mot-clé Bearer' ')
     const token = req.headers.authorization.split(' ')[1];
     //décodage du token avec la fonction verify
-    const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
+    const decodedToken = jwt.verify(token, `${process.env.TOKEN_KEY}`);
     //puis extraction de l'ID utilisateur contenu dans le token
     const userId = decodedToken.userId;
 

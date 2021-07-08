@@ -1,7 +1,6 @@
 //import des modules d'extension
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-//'use strict';
 
 //schéma de données avec la méthode schema mise à disposition par Mongoose
 const userSchema = mongoose.Schema({
