@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
 //import du path qui donne accès au systeme de fichier
 const path = require('path');
 //import des routes
@@ -17,9 +17,9 @@ const app = express();
 
 
 //lancement du package dotenv pour accès aux variables d'environnement
-dotenv.config()
+dotenv.config();
 //connexion à la BDD
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.f4gxp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://${process.env.DB_NAME}:${process.env.DB_PASS}@cluster0.f4gxp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   { 
     useNewUrlParser: true,
     useUnifiedTopology: true 
@@ -41,9 +41,7 @@ app.use((req, res, next) =>
   next();
 });
 
-
-
-//analyse du corps et formatage des requêtes provenant du frontend 
+//analyse du corps et formatage en json des requêtes provenant du frontend 
 app.use(bodyParser.json());
 
 //ajout d'un gestionnaire de routage pour les ressources images 
