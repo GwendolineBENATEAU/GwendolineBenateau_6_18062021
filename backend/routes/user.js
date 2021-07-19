@@ -7,9 +7,9 @@ const router = express.Router();
 //import du controleur user
 const userCtrl = require('../controllers/user');
 
-
+//import du module Express-rate-limit contre 
 const rateLimit = require("express-rate-limit");
-//4 possibilite de se connecter, toutes les 15 min
+//5 possibilite de se connecter, toutes les 15 min
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 5, // limite de 5 tentatives
