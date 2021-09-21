@@ -1,4 +1,4 @@
-![SoPeckocko]()
+![SoPeckocko](https://github.com/GwendolineBENATEAU/GwendolineBenateau_6_18062021/blob/master/documentation/P6_Presentation_projet.jpg)
 
 
 # SoPeckocko 
@@ -6,14 +6,14 @@ SoPeckocko est le 6e projet fictif à caractère pédagique de la formation de D
 
 ## Description du projet
 ### Scénario
-La marque So Pekocko, qui crée des sauces piquantes, connaît un franc succès, en partie grâce à sa chaîne de vidéos YouTube “La Piquante”. L’entreprise souhaite désormais développer une application d’évaluation de ses sauces piquantes, appelée “Piquante”... ([lire la suite]())
+La marque So Pekocko, qui crée des sauces piquantes, connaît un franc succès, en partie grâce à sa chaîne de vidéos YouTube “La Piquante”. L’entreprise souhaite désormais développer une application d’évaluation de ses sauces piquantes, appelée “Piquante”... ([lire la suite](https://github.com/GwendolineBENATEAU/GwendolineBenateau_6_18062021/blob/master/documentation/P6_P%C3%A9rim%C3%A8treDuProjet_DW-OpenClassrooms.pdf))
 
 ### Documentation 
-[Note de cadrage]()
-[Guidelines API]()
+[Note de cadrage](https://github.com/GwendolineBENATEAU/GwendolineBenateau_6_18062021/blob/master/documentation/P6_Note_de_cadrage_SoPekocko_V3.pdf)
+[Guidelines API](https://github.com/GwendolineBENATEAU/GwendolineBenateau_6_18062021/blob/master/documentation/P6_Guidelines%2BAPI.pdf)
 
 ### Objectif
-Réalisation du backend et de l'API sécurisée du MVP de l'app web Piquante (SoPeckocko) avec Node.js + framework Express, MongoBD + plugin Mongoose en maitrissant les standards de protection OWASP et règlementation RGPD.
+Réalisation du backend et de l'API sécurisée du MVP de l'app web Piquante (SoPeckocko) avec Node.js + framework Express, MongoBD + plugin Mongoose, en maitrissant les standards de protection OWASP et règlementation RGPD.
 
 
 ### Compétences évaluées
@@ -53,7 +53,7 @@ Réalisation du backend et de l'API sécurisée du MVP de l'app web Piquante (So
 - Compatibilité Chrome et Firefox (dernières versions)
 
 ## Présentation du projet
-- Diaporama de présentation du projet [SoPeckocko]()
+- Diaporama de présentation du projet [SoPeckocko](https://www.canva.com/design/DAEjswdy0sk/8AyC8RN9ptsBGosoUOEYKA/view?utm_content=DAEjswdy0sk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
 
 ## Auteurs
 Gwendoline Bénteau
