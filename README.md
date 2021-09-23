@@ -50,7 +50,7 @@ _A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend
 - [GitKraken](https://www.gitkraken.com/) - Outil de versionning (client)
 
 ## Stack technique back-end et BDD
-- NODE.JS + EXPRESS
+- Node.js + Express
 - MongoDB
 - Standards de sécurité OWASP
 - Règlementation RGPD
