@@ -14,7 +14,7 @@ La marque So Pekocko, qui crée des sauces piquantes, connaît un franc succès,
 [Guidelines API](https://github.com/GwendolineBENATEAU/GwendolineBenateau_6_18062021/blob/master/documentation/P6_Guidelines%2BAPI.pdf)
 
 ### Objectif
-Réalisation du backend et de l'API sécurisée de l'app web Piquante (SoPeckocko) avec Node.js + framework Express, MongoBD + plugin Mongoose, en respectant les standards de sécurité OWASP et règlementation RGPD en matière de protections des données.
+Réalisation du backend et de l'API sécurisée de l'app web Piquante (SoPeckocko), en Node.js, avec le framework Express et une database en MongoBD, en respectant les standards de sécurité OWASP et règlementation RGPD en matière de protections des données.
 
 
 ### Compétences évaluées
