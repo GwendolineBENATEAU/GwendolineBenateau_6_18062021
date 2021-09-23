@@ -31,7 +31,7 @@ Réalisation du backend et de l'API sécurisée de l'app web Piquante (SoPeckock
 1. Cloner l'ensemble de ce dépôt GitHub  
 
 2. Dans un terminal, accéder au dossier du __frontend__ :
-<br>:point_right: Veuillez préalablement consulter [le repo GitHub initial du frontend](https://github.com/OpenClassrooms-Student-Center/dwj-projet6) pour connaitre l'environnement et versions utilisés pour son développement
+ - Veuillez préalablement consulter [le repo GitHub initial du frontend](https://github.com/OpenClassrooms-Student-Center/dwj-projet6) pour connaitre l'environnement et versions utilisés pour son développement
  - Installer les dépendances : ``npm install`` 
  - Démarer le serveur de développement : ``ng serve`` 
 
