@@ -25,7 +25,7 @@ Réalisation du backend et de l'API sécurisée de l'app web Piquante (SoPeckock
 
 ## Pour tester l'application
 ### Conditions préalables
-- [node.js et npm](https://nodejs.org/fr/) en version 14.0
+- [node.js et npm](https://nodejs.org/fr/) en version 14.+
 - [angular-cli](https://www.npmjs.com/package/@angular/cli/v/7.0.2) en version 7.0.2
 - [node-sass](https://www.npmjs.com/package/node-sass/v/4.14.0) en version correspondante à NodeJS (ex. node@14.0 => node-sass@4.14+)
 
