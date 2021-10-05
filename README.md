@@ -28,6 +28,7 @@ Réalisation du backend et de l'API sécurisée de l'app web Piquante (SoPeckock
 - [node.js et npm](https://nodejs.org/fr/) en version 14.+
 - [angular-cli](https://www.npmjs.com/package/@angular/cli/v/7.0.2) en version 7.0.2
 - [node-sass](https://www.npmjs.com/package/node-sass/v/4.14.0) en version correspondante à NodeJS (ex. node@14.0 => node-sass@4.14+)
+- le fichier dotenv (.env) contenant les variables d'environnement
 
 ### Installation de l'app
 _A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend](https://github.com/OpenClassrooms-Student-Center/dwj-projet6) pour connaitre l'environnement et les versions utilisés pour son développement_
