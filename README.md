@@ -25,9 +25,9 @@ Réalisation du backend et de l'API sécurisée de l'app web Piquante (SoPeckock
 
 ## Pour tester l'application
 ### Conditions préalables
-- [node.js et npm](https://nodejs.org/fr/) - Environnement d’exécution JavaScript (à) installé(er) localement sur votre machine
+- [node.js et npm](https://nodejs.org/fr/) en version 14.0
 - [angular-cli](https://www.npmjs.com/package/@angular/cli/v/7.0.2) en version 7.0.2
-- [node-sass](https://www.npmjs.com/package/node-sass/v/4.14.0) version correspondante à NodeJS (ex. node@14.0 => node-sass@4.14+)
+- [node-sass](https://www.npmjs.com/package/node-sass/v/4.14.0) en version correspondante à NodeJS (ex. node@14.0 => node-sass@4.14+)
 
 ### Installation de l'app
 _A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend](https://github.com/OpenClassrooms-Student-Center/dwj-projet6) pour connaitre l'environnement et les versions angular et sass utilisés pour son développement_
