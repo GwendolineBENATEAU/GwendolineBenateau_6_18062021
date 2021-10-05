@@ -36,7 +36,7 @@ _A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend
 
 2. Dans un terminal, accéder au dossier du __frontend__ :
  - Installer les dépendances : ``npm install`` 
- - Démarer le serveur de développement : ``ng serve`` 
+ - Démarer le serveur de développement : ``npm start`` 
 
 3. Ajouter à la racine du backend, le fichier de configuration __nommé ".env"__, qui vous a été fourni dans les livrables post-soutenance. Dans d'autres circonstances, veuillez m'en faire la demande :)
 
