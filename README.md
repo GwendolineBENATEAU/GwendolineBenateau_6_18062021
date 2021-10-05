@@ -28,7 +28,7 @@ Réalisation du backend et de l'API sécurisée de l'app web Piquante (SoPeckock
 - [Node.js et npm](https://nodejs.org/fr/) - Environnement d’exécution JavaScript (à) installé(er) localement sur votre machine
 
 ### Installation de l'app
-_A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend](https://github.com/OpenClassrooms-Student-Center/dwj-projet6) pour connaitre l'environnement et versions utilisés pour son développement_
+_A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend](https://github.com/OpenClassrooms-Student-Center/dwj-projet6) pour connaitre l'environnement et les versions angular et sass utilisés pour son développement_
 
 1. Cloner l'ensemble de ce dépôt GitHub  
 
