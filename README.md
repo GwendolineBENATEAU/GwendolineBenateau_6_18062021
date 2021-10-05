@@ -34,13 +34,13 @@ _A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend
 
 1. Cloner l'ensemble de ce dépôt GitHub  
 
-2. Ajouter à la racine du backend, le fichier de configuration __nommé ".env"__, qui vous a été fourni dans les livrables post-soutenance. Dans d'autres circonstances, veuillez m'en faire la demande :)
+2. Ajouter à la racine du dossier backend, le fichier de configuration __nommé ".env"__, qui vous a été fourni dans les livrables post-soutenance. Dans d'autres circonstances, veuillez m'en faire la demande :)
 
-3. Dans un autre terminal, accéder au dossier du __backend__ :
+3. Dans un terminal, accéder au dossier du __backend__ :
  - Installer les dépendances : ``npm install`` 
  - Lancer le serveur node : ``node server`` 
 
-4. Dans un terminal, accéder au dossier du __frontend__ :
+4. Dans un autre terminal, accéder au dossier du __frontend__ :
  - Installer les dépendances : ``npm install`` 
  - Démarer le serveur de développement : ``npm start`` 
 
