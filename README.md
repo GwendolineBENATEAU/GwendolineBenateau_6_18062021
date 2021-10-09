@@ -2,7 +2,7 @@
 
 
 # SoPeckocko 
-SoPeckocko est le 6e projet fictif à caractère pédagique de la formation de Dévéloppeur Web (OpenClassRooms) qui consiste à construire une API sécurisée pour une application d'avis gastronomiques.
+SoPeckocko est le 6e projet fictif à caractère pédagogique de la formation de Développeur Web (OpenClassRooms) qui consiste à construire une API sécurisée pour une application d'avis gastronomiques.
 
 ## Description du projet
 ### Scénario
