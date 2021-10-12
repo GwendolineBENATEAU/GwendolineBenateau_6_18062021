@@ -60,7 +60,7 @@ _A noter : Veuillez préalablement consulter [le repo GitHub initial du frontend
 ## Présentation du projet
 - Diaporama de présentation du projet [SoPeckocko](https://www.canva.com/design/DAEjswdy0sk/8AyC8RN9ptsBGosoUOEYKA/view?utm_content=DAEjswdy0sk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
 - Appréciation de l'évaluateur : 
-> *"Gwendoline a réalisé une bonne présentation ou elle a su expliquer la mise en place de son projet. Des corrections ont été effectuées dans les 48h afin de rendre le projet plus conforme"* - Davy Boutchoki
+> *"Gwendoline a réalisé une bonne présentation ou elle a su expliquer la mise en place de son projet. Des corrections ont été effectuées (en moins de 48h) afin de rendre le projet plus conforme"* - Davy Boutchoki
 
 ## Auteurs
 Gwendoline Bénateau
